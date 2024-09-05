@@ -66,6 +66,16 @@ protected:
 	UPROPERTY(EditInstanceOnly)  //свойство можно редактировать в окнах свойств, но только в экземплярах
 	bool IsAlive = true;
 	
+	UPROPERTY(EditAnywhere) 
+	float Amplitude2 = 100;
+	
+	UPROPERTY(EditAnywhere) 
+	float Frequency2 = 10;
+	
+	UPROPERTY(EditAnywhere) 
+	FVector InitialLocation2 = FVector::ZeroVector;
+
+
 
 public:	
 	// Called every frame
@@ -78,4 +88,7 @@ private:
 protected:
 	UFUNCTION(BlueprintCallable) //доступ, чтобы работать с функцией внутри редактора
 	void ShowInformation();
+
+	UFUNCTION(BlueprintCallable)
+	FVector SinMovement();
 };

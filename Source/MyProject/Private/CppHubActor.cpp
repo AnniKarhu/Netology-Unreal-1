@@ -15,8 +15,7 @@ ACppHubActor::ACppHubActor() {
 void ACppHubActor::BeginPlay() {
   Super::BeginPlay();
   GetWorldTimerManager().SetTimer(SpawnTimerHandle, this,
-                                  &ACppHubActor::OnTimeToSpawn, SpawnTimerRate,
-                                  true);
+                                  &ACppHubActor::OnTimeToSpawn, SpawnTimerRate, true);
   GetWorldTimerManager().SetTimer(DestroyTimerHandle, this,
                                   &ACppHubActor::OnTimeToDestroy,
                                   DestroyTimerRate, true);
